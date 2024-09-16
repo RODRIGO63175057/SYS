@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxWidth="1.7976931348623157E308" prefHeight="400.0" style="-fx-background-color: #424242; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.tresraya.HelloController">
+  <children>
+    <HBox maxWidth="1.7976931348623157E308" prefHeight="377.0">
+      <children>
+        <Pane>
+          <children>
+            <VBox layoutX="14.0" layoutY="14.0">
+              <children>
+                <Label text="SAID RODRIGO PACCORI SUAQUITA" textFill="WHITESMOKE">
+                  <VBox.margin>
+                    <Insets bottom="10.0" />
+                  </VBox.margin>
+                </Label>
+                <GridPane alignment="CENTER" gridLinesVisible="true" hgap="5.0" maxHeight="300.0" maxWidth="300.0" prefHeight="300.0" prefWidth="300.0" vgap="5.0">
+                  <columnConstraints>
+                    <ColumnConstraints percentWidth="33.33" />
+                    <ColumnConstraints percentWidth="33.33" />
+                    <ColumnConstraints percentWidth="33.33" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints percentHeight="33.33" />
+                    <RowConstraints percentHeight="33.33" />
+                    <RowConstraints percentHeight="33.33" />
+                  </rowConstraints>
+                  <children>
+                    <Button fx:id="btn0" maxHeight="Infinity" maxWidth="Infinity" onAction="#change0" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" />
+                    <Button fx:id="btn1" maxHeight="Infinity" maxWidth="Infinity" onAction="#change1" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="1" />
+                    <Button fx:id="btn2" maxHeight="Infinity" maxWidth="Infinity" onAction="#change2" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="2" />
+                    <Button fx:id="btn3" maxHeight="Infinity" maxWidth="Infinity" onAction="#change3" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.rowIndex="1" />
+                    <Button fx:id="btn4" maxHeight="Infinity" maxWidth="Infinity" onAction="#change4" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Button fx:id="btn5" maxHeight="Infinity" maxWidth="Infinity" onAction="#change5" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Button fx:id="btn6" maxHeight="Infinity" maxWidth="Infinity" onAction="#change6" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.rowIndex="2" />
+                    <Button fx:id="btn7" maxHeight="Infinity" maxWidth="Infinity" onAction="#change7" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Button fx:id="btn8" maxHeight="Infinity" maxWidth="Infinity" onAction="#change8" style="-fx-font-size: 24; -fx-background-color: #003366;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  </children>
+                </GridPane>
+              </children>
+            </VBox>
+            <Label fx:id="lblTurno" layoutX="57.0" layoutY="355.0" textFill="WHITESMOKE">
+              <font>
+                <Font name="System Bold" size="14.0" />
+              </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="355.0" prefHeight="26.0" prefWidth="62.0" text="TURNO:" textFill="WHITESMOKE" />
+          </children>
+        </Pane>
+        <AnchorPane prefHeight="385.0" prefWidth="465.0">
+          <children>
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="208.0" prefWidth="452.0" style="-fx-background-color: #F5F5F5;">
+              <columns>
+                <TableColumn fx:id="numeroPartida" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Nombre Partida " />
+                <TableColumn fx:id="nombreJugador1" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Nombre Jugador 1" />
+                <TableColumn fx:id="nombreJugador2" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Nombre Jugador 2" />
+                <TableColumn fx:id="nombreGanador" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Nombre Ganador" />
+                <TableColumn fx:id="puntuacion" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Puntuación" />
+                <TableColumn fx:id="estado" prefWidth="75.0" style="-fx-background-color: #F5F5F5; -fx-text-fill: black;" text="Estado" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtJugador1" layoutX="302.0" layoutY="236.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: black;" />
+            <TextField fx:id="txtJugador2" layoutX="302.0" layoutY="270.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: black;" />
+            <Label layoutX="182.0" layoutY="240.0" text="Nombre Jugadro 1:" textFill="WHITESMOKE" />
+            <Label layoutX="182.0" layoutY="274.0" text="Nombre Jugadro 2:" textFill="WHITESMOKE" />
+            <Button fx:id="btnIniciar" layoutX="20.0" layoutY="238.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="26.0" prefWidth="102.0" text="Iniciar" />
+            <Button fx:id="btnAnular" layoutX="18.0" layoutY="282.0" mnemonicParsing="false" onAction="#anular" prefHeight="26.0" prefWidth="102.0" text="Anular" />
+          </children>
+        </AnchorPane>
+      </children>
+    </HBox>
+  </children>
+</VBox>
